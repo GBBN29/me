@@ -377,6 +377,18 @@ html, body {
   transform: translateY(-2px);
 }
 
+.btn-email {
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+.btn-email:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
