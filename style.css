@@ -1,0 +1,161 @@
+/* Reset and modern defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Color Palette - Elegant Minimalist */
+  --bg-primary: #faf9f6; /* Warm off-white */
+  --text-primary: #1c1917; /* Warm dark gray */
+  --text-secondary: #78716c; /* Muted gray-brown */
+  --accent: #44403c; /* Stone charcoal */
+  --shadow-color: rgba(28, 25, 23, 0.05);
+  --border-color: rgba(28, 25, 23, 0.08);
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #121212; /* Deep dark gray */
+    --text-primary: #f5f5f4; /* Off-white */
+    --text-secondary: #a8a29e; /* Muted stone gray */
+    --accent: #e7e5e4; /* Light stone */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --border-color: rgba(245, 245, 244, 0.08);
+  }
+}
+
+html, body {
+  min-height: 100%;
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 6vh;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background subtle decorative pattern */
+.bg-ambient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(120, 113, 108, 0.03) 0%, transparent 80%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Main Card Container */
+.profile-card {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 3rem 2.5rem;
+  max-width: 420px;
+  width: 90%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Profile Photo Frame */
+.photo-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(135deg, var(--border-color), transparent);
+  box-shadow: 0 10px 30px var(--shadow-color);
+  transition: var(--transition-smooth);
+}
+
+.photo-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+.photo-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--border-color);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+  /* Filter to blend nicely with the warm/dark theme */
+  filter: grayscale(10%) contrast(105%);
+}
+
+.photo-container:hover .profile-photo {
+  transform: scale(1.05);
+}
+
+/* Details Section */
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.profile-title {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Subtle separator */
+.separator {
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent);
+  margin: 1.5rem auto;
+  opacity: 0.3;
+  border-radius: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
