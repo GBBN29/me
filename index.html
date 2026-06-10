@@ -1,36 +1,360 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Page de profil minimaliste de Guillaume Babin.">
-  <title>Guillaume Babin</title>
+  <meta name="description"
+    content="Guillaume Babin - Chef d'entreprise depuis 30 ans et développeur passionné (PHP/MySQL, Dolibarr ERP, Google Apps Script). Découvrez mes réalisations et mon parcours.">
+  <title>Guillaume Babin - Chef d'entreprise &amp; Développeur</title>
   <!-- Google Fonts for premium typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <!-- Separate CSS stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Subtle background decoration -->
   <div class="bg-ambient" id="ambientBg"></div>
 
   <!-- Profile Card container -->
   <main class="profile-card" id="mainProfileCard">
-    <!-- Image with modern hover border effect -->
-    <div class="photo-container" id="profilePhotoContainer">
-      <div class="photo-wrapper">
-        <img src="images/gb.jpg" alt="Photo de Guillaume Babin" class="profile-photo" id="profileImage">
+    <!-- Header: Photo, Nom, Titre -->
+    <header class="profile-header">
+      <div class="photo-container" id="profilePhotoContainer">
+        <div class="photo-wrapper">
+          <img src="images/gb.jpg" alt="Photo de Guillaume Babin" class="profile-photo" id="profileImage">
+        </div>
       </div>
-    </div>
+      <div class="profile-details" id="profileDetailsContainer">
+        <h1 class="profile-name" id="userName">Guillaume Babin</h1>
+        <p class="profile-title" id="userTitle">Chef d'entreprise &amp; Développeur</p>
+        <div class="separator" id="sectionSeparator"></div>
+      </div>
+    </header>
 
-    <!-- User details -->
-    <div class="profile-details" id="profileDetailsContainer">
-      <h1 class="profile-name" id="userName">Guillaume Babin</h1>
-      <div class="separator" id="sectionSeparator"></div>
-      <p class="profile-title" id="userTitle">Développeur &amp; Créateur autodidacte</p>
-    </div>
+    <!-- Bio / À propos -->
+    <section class="profile-section" id="about-section" aria-labelledby="about-title">
+      <p class="profile-bio" id="aboutBio">
+        Dirigeant d'entreprise depuis trois décennies, j'ai toujours conçu la technique comme un puissant levier
+        d'efficacité opérationnelle. Autodidacte et passionné, je développe et maintiens nos systèmes de gestion (ERP
+        Dolibarr) et conçois des solutions sur-mesure pour automatiser nos processus quotidiens.
+      </p>
+    </section>
+
+    <!-- Expertises -->
+    <section class="profile-section" id="skills-section" aria-labelledby="skills-title">
+      <h2 class="section-title" id="skills-title">Expertises</h2>
+      <div class="skills-grid" id="skillsGrid">
+
+        <div class="skill-card" id="skill-dolibarr">
+          <div class="skill-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="9" rx="1"></rect>
+              <rect x="14" y="3" width="7" height="5" rx="1"></rect>
+              <rect x="14" y="12" width="7" height="9" rx="1"></rect>
+              <rect x="3" y="16" width="7" height="5" rx="1"></rect>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <h3>Dolibarr ERP</h3>
+            <p>Administration, hébergement, maintenance évolutive et personnalisation de notre système de gestion
+              commerciale.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" id="skill-php">
+          <div class="skill-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <h3>PHP &amp; MySQL</h3>
+            <p>Conception et développement d'applications web et de bases de données relationnelles pour répondre à des
+              besoins métiers.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" id="skill-automation">
+          <div class="skill-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <h3>Apps Script &amp; APIs</h3>
+            <p>Automatisation de flux sur Google Workspace et intégrations d'APIs tierces pour supprimer les tâches
+              répétitives.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projets clés -->
+    <section class="profile-section" id="projects-section" aria-labelledby="projects-title">
+      <h2 class="section-title" id="projects-title">Projets Récents</h2>
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card" id="project-transporters">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <h3>Comparateur Transporteurs</h3>
+          </div>
+          <p class="project-desc">Outil d'aide à la décision analysant en temps réel les grilles tarifaires des
+            transporteurs pour optimiser instantanément les coûts de chaque expédition.</p>
+          <div class="project-tags">
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>Logistique</span>
+          </div>
+        </div>
+
+        <div class="project-card" id="project-invoice-ai">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"></path>
+              </svg>
+            </div>
+            <h3>Pré-saisie IA de factures</h3>
+          </div>
+          <p class="project-desc">Automatisation de la lecture des factures fournisseurs PDF via intégration IA, avec
+            pré-remplissage et lien vers le logiciel de comptabilité.</p>
+          <div class="project-tags">
+            <span>Apps Script</span>
+          </div>
+        </div>
+
+        <div class="project-card" id="project-dolibarr-modules">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3>Modules Dolibarr</h3>
+          </div>
+          <p class="project-desc">Développement d'extensions sur-mesure intégrées au cœur de Dolibarr pour adapter le
+            système aux flux de travail spécifiques de notre activité commerciale.</p>
+          <div class="project-tags">
+            <span>PHP</span>
+            <span>Dolibarr</span>
+          </div>
+        </div>
+
+        <div class="project-card" id="project-online-catalog">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </div>
+            <h3>Catalogue en Ligne</h3>
+          </div>
+          <p class="project-desc">Création et mise en place d'un catalogue de produits en ligne, synchronisé de manière
+            dynamique avec la base de données de notre gestion commerciale.</p>
+          <div class="project-tags">
+            <span>PHP</span>
+            <span>SGBD</span>
+            <span>API Rest</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pied de page / Contact & Liens -->
+    <footer class="profile-footer" id="contactSection">
+      <div class="contact-buttons">
+        <a href="https://github.com/GBBN29/" target="_blank" rel="noopener noreferrer" class="btn btn-github"
+          id="btnGithub" aria-label="Profil GitHub (s'ouvre dans un nouvel onglet)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+            </path>
+            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <button type="button" class="btn btn-email" id="btnEmail" aria-label="Ouvrir la fiche de contact">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span>Contact</span>
+        </button>
+      </div>
+    </footer>
   </main>
+
+  <!-- Contact Modal -->
+  <dialog class="contact-modal" id="contactModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Fiche de contact</h2>
+        <button class="btn-close" id="closeModal" aria-label="Fermer la modale">&times;</button>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <!-- Honeypot field (hidden visually and from screenreaders/accessibility tree) -->
+        <div class="honeypot-container" aria-hidden="true">
+          <label for="honeypot_address">Ne pas remplir ce champ :</label>
+          <input type="text" id="honeypot_address" name="address" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label for="contact_name">Nom &amp; Prénom</label>
+          <input type="text" id="contact_name" name="name" required placeholder="Votre nom et prénom">
+        </div>
+
+        <div class="form-group">
+          <label for="contact_email">Votre adresse e-mail</label>
+          <input type="email" id="contact_email" name="email" required placeholder="votre.email@exemple.com">
+        </div>
+
+        <div class="form-group">
+          <label for="contact_subject">Objet</label>
+          <input type="text" id="contact_subject" name="subject" required placeholder="Sujet de votre message">
+        </div>
+
+        <div class="form-group">
+          <label for="contact_message">Message</label>
+          <textarea id="contact_message" name="message" rows="4" required
+            placeholder="Écrivez votre message ici..."></textarea>
+        </div>
+
+        <!-- Math validation challenge -->
+        <div class="form-group captcha-group">
+          <label for="contact_captcha" id="captchaLabel">Calcul de validation</label>
+          <div class="captcha-input-wrapper">
+            <input type="number" id="contact_captcha" name="captcha" required placeholder="Résultat">
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-submit" id="btnSubmitForm">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('contactModal');
+      const openBtn = document.getElementById('btnEmail');
+      const closeBtn = document.getElementById('closeModal');
+      const form = document.getElementById('contactForm');
+      const captchaLabel = document.getElementById('captchaLabel');
+      const captchaInput = document.getElementById('contact_captcha');
+
+      let captchaAnswer = 0;
+
+      // Base64 encoded email to avoid scrapers (guillaume.babin.sdmi@gmail.com)
+      const encodedEmail = "Z3VpbGxhdW1lLmJhYmluLnNkbWlAZ21haWwuY29t";
+
+      // Function to generate a simple mathematical challenge
+      function generateCaptcha() {
+        const num1 = Math.floor(Math.random() * 9) + 1; // 1 to 9
+        const num2 = Math.floor(Math.random() * 9) + 1; // 1 to 9
+        captchaAnswer = num1 + num2;
+        captchaLabel.textContent = `Sécurité : Combien font ${num1} + ${num2} ?`;
+        captchaInput.value = '';
+      }
+
+      // Open modal
+      openBtn.addEventListener('click', () => {
+        generateCaptcha();
+        modal.showModal();
+      });
+
+      // Close modal
+      closeBtn.addEventListener('click', () => {
+        modal.close();
+      });
+
+      // Close modal on click outside content
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.close();
+        }
+      });
+
+      // Form submission
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // 1. Honeypot check (bot-trap)
+        const honeypot = document.getElementById('honeypot_address').value;
+        if (honeypot) {
+          console.warn("Spam bot detected.");
+          modal.close();
+          return;
+        }
+
+        // 2. Math Captcha verification
+        const userAnswer = parseInt(captchaInput.value, 10);
+        if (userAnswer !== captchaAnswer) {
+          alert("Le calcul de validation est incorrect. Veuillez réessayer.");
+          generateCaptcha();
+          return;
+        }
+
+        // 3. Decode destination email
+        const targetEmail = atob(encodedEmail);
+
+        // 4. Gather form values
+        const name = document.getElementById('contact_name').value;
+        const email = document.getElementById('contact_email').value;
+        const subject = document.getElementById('contact_subject').value;
+        const message = document.getElementById('contact_message').value;
+
+        // 5. Construct mailto parameters
+        const emailSubject = encodeURIComponent(`[Contact Portfolio] ${subject}`);
+        const emailBody = encodeURIComponent(
+          `Nom : ${name}\n` +
+          `E-mail de contact : ${email}\n\n` +
+          `Message :\n${message}`
+        );
+
+        // Redirect to email client
+        window.location.href = `mailto:${targetEmail}?subject=${emailSubject}&body=${emailBody}`;
+
+        // Reset and close
+        modal.close();
+        form.reset();
+      });
+    });
+  </script>
 </body>
+
 </html>
