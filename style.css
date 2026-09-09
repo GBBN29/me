@@ -209,7 +209,7 @@ html, body {
 
 @media (min-width: 540px) {
   .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -252,6 +252,18 @@ html, body {
   font-size: 0.8rem;
   line-height: 1.5;
   color: var(--text-secondary);
+}
+
+.skill-info a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--border-color);
+  transition: var(--transition-smooth);
+}
+
+.skill-info a:hover {
+  text-decoration-color: var(--text-primary);
 }
 
 /* Projects Grid */
